@@ -1,5 +1,13 @@
 {
   "dependencies": {
     "express": "^4.17.2"
+  
+  },
+  
+
+  "scripts": {
+    "start": "nodemon server.js"
+
   }
 }
+
