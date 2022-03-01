@@ -52,7 +52,7 @@ app.set('views', 'view');
 // })
 
 app.get('/', (req, res) => {
-  res.render('login.hbs')
+  res.render('startscreen.hbs')
 })
 
 app.get('/about', (req, res) => {
