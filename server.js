@@ -10,25 +10,67 @@
 //   console.log(`Example app listening on port ${port}`)
 // })
 
-const express =  require ('express')
 
-express()
-  .arguments('/static',express.static('static'))
 
-  .get('/', onhome)
-  .get('/about', onabout)
-  .get('/login', onlogin)
+// const express =  require ('express')
 
-  .listen(8000)
+// express()
+//   .use('/static',express.static('static'))
 
-function onhome(req, res) {
-  res.send('<h1>Hello World!</h1>')
-}
+//   .get('/', onhome)
+//   .get('/about', onabout)
+//   .get('/login', onlogin)
 
-function onabout(req, res) {
-  res.send('<h1>About me</h1>')
-}
+//   .listen(8000)
 
-function onlogin(req, res) {
-  res.send('<h1>Login page</h1>')
-}
+// function onhome(req, res) {
+//   res.send('<h1>Hello World!</h1>')
+// }
+
+// function onabout(req, res) {
+//   res.send('<h1>About me</h1>')
+// }
+
+// function onlogin(req, res) {
+//   res.send('<h1>Login page</h1>')
+// }
+
+const express = require('express')
+const res = require('express/lib/response')
+const app =  express()
+const PORT = process.env.PORT || 1337
+
+
+app.use('/static',express.static('static'))
+app.set('view engine', 'hbs');
+app.set('views', 'view');
+
+
+
+// app.get('/', (req, res) => {
+//   res.send('login.hbs')
+// })
+
+app.get('/', (req, res) => {
+  res.render('login.hbs')
+})
+
+app.get('/about', (req, res) => {
+  res.render('about.hbs')
+})
+
+app.get('/about', (req, res) => {
+  res.render('profile.hbs')
+})
+
+app.get('/contact', (req, res) => {
+  res.send('contactpagina..')
+})
+
+app.get('*', (req, res) => {
+  res.send('<h1>Not found..</h1>')
+})
+
+app.listen(PORT, () => {
+  console.log(`Hello on port: ${PORT}`)
+})

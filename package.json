@@ -1,13 +1,15 @@
 {
   "dependencies": {
-    "express": "^4.17.2"
-  
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "node-sass": "^7.0.1"
   },
-  
-
   "scripts": {
-    "start": "nodemon server.js"
-
+    "start": "node server.js",
+    "lint": "eslint .",
+    "scss": "node-sass --watch sass/app.scss -o static/css"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0"
   }
 }
-
