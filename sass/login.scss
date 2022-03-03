@@ -1,6 +1,144 @@
 
-h1 {
-    font-size: 1em;
-    color: rgb(36, 36, 36);
-    font-family: 'Poppins', sans-serif;
+// ////////////////////
+// Login (start)
+// ////////////////////
+
+
+
+#bg {
+    // clip-path: circle(85.4% at 50% 0);
+    // clip-path: circle(44.4% at 50% 0);
+    // clip-path: circle(49.4% at 50% 0);
+    clip-path: circle(41.4% at 50% 0);
+
+    background-color: $main-color;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
 }
+
+.Intro {
+    margin: auto;
+    padding: 6em 3em 6em 3em;
+    max-width: 30em;
+    // white-space: nowrap;
+    text-align: center;
+    color: $white;
+    // background-image: url(../images/dotsbg.svg);
+    // background-repeat: no-repeat;
+    // background-position: right 2em;
+
+    // background: url("../images/dotsbg.svg") no-repeat 95% 50%;
+    background: url("../images/dotsbg.svg") no-repeat 90% 33% ;
+    // background-size: cover;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+}
+
+// .form-section{
+
+//     margin: auto;
+//     max-width: 40em;
+
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
+#loginform {
+    margin: auto;
+    max-width: 40em;
+    display: grid;
+    // font-size: 4em;
+    padding: 0em 1em;
+    // padding: 8em 1em 0em;
+    border: none;
+    font-family: $main-font;
+
+    fieldset:first-of-type{
+        display: grid;
+        border: none;
+
+        label{
+            font-size: 1.5em;
+            color: $font-color;
+            font-weight: 600;
+            margin-top: .5em;
+        }
+
+        input {
+            background-color: #F4F6FC;
+            border-radius: .5em;
+            padding: 1.5em 2em;
+            margin: 1em 0em 1em 0em;
+            border: none;
+            font-family: $main-font;
+            max-width: 28em;
+            width: 100%;
+            font-size: 1em;
+            color: #B8C0D7;
+
+            &::placeholder{
+                color: #B8C0D7;
+                opacity: 1; 
+                font-weight: 500;
+            }
+        }
+    }
+
+    fieldset:last-of-type{
+        display: grid;
+        border: none;
+        text-align: center;
+
+        button {
+            background-color: $main-color;
+            border-radius: .5em;
+            padding: 1em 2em;
+            margin: 1em 0em 1em 0em;
+            border: none;
+            font-family: $main-font;
+            max-width: 28em;
+            width: 100%;
+            font-size: 1.5em;
+            color: $white;
+            font-weight: 600;
+            margin-top: 2em;
+            transition: .25s ease;
+            cursor: pointer;
+
+
+            &:hover{
+                background-color: $btn-primary-hover;
+                transition: .25s ease;
+            }
+
+        }
+
+        label {
+            color: $font-color;
+
+            a{
+                color: $main-color;
+                
+            }
+        }
+
+        }
+}
+
+// ////////////////////
+// Login (end)
+// ////////////////////

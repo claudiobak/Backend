@@ -1,4 +1,115 @@
-h1 {
-    font-size: 4em;
-    color: blue;
+// ////////////////////
+// Welcomepage (start)
+// ////////////////////
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  background-image: linear-gradient(var(--brand-clr) 8em, transparent 8em);
+}
+
+html .body2{
+  background-image: linear-gradient(var(--dark-clr) 8em, transparent 8em);
+}
+
+section {
+  max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $main-font;
+    font-size: $font-size-medium;
+
+    img {
+        max-width: 100%;
+        padding: 1em;
+        width: 25em;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: $font-size-large;
+    }
+}
+
+
+.welcomescreen {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    padding-top: 4em;
+
+
+    h1 {
+        text-align: center;
+        color: $font-color;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: .5em;
+
+    }
+
+    p {
+        color: $font-color;
+        font-size: $font-size-medium;
+        text-align: center;
+    }
+
+}
+
+.buttons-section {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 1em;
+
+    .btn{
+        color: $white;
+        // font-size: $font-size-large;
+        font-size: 1.5em;
+        font-weight: 600;
+        padding: 1em 2em;
+
+        text-decoration: none;
+        width: 75%;
+        max-width: 14em;
+        background-color: darkgrey;
+        margin: 1em auto 0 auto;
+        border-radius: .5em;
+        transition: .25s;
+
+    }
+
+    .btn-main{
+        background-color: $main-color;
+
+        &:hover{
+            background-color: $btn-primary-hover ;
+            transition: .25s;
+        }
+        
+    }
+
+    .btn-secondary{
+        background-color: $light-color;
+        color: $font-color;
+
+        &:hover{
+            background-color: $btn-secondary-hover;
+            transition: .25s;
+        }
+    }
+
+}
+
+// ////////////////////
+// Welcomepage (end)
+// ////////////////////

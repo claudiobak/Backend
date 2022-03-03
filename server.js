@@ -60,7 +60,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-  res.render('profile.hbs')
+  res.render('login.hbs')
 })
 
 app.get('/contact', (req, res) => {
