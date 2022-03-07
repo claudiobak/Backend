@@ -1,9 +1,203 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-h1 {
-  font-size: 4em;
-  color: blue; }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-h1 {
+html {
+  background-image: linear-gradient(var(--brand-clr) 8em, transparent 8em);
+}
+
+html .body2 {
+  background-image: linear-gradient(var(--dark-clr) 8em, transparent 8em);
+}
+
+section {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   font-size: 1em;
-  color: #242424;
-  font-family: 'Poppins', sans-serif; }
+}
+body img {
+  max-width: 100%;
+  padding: 1em;
+  width: 25em;
+  margin: auto;
+}
+body h1 {
+  font-size: 2em;
+}
+
+.welcomescreen {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  padding-top: 4em;
+}
+.welcomescreen h1 {
+  text-align: center;
+  color: #333334;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+.welcomescreen p {
+  color: #333334;
+  font-size: 1em;
+  text-align: center;
+}
+
+.buttons-section {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.buttons-section .btn {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 1em 2em;
+  text-decoration: none;
+  width: 75%;
+  max-width: 14em;
+  background-color: darkgrey;
+  margin: 1em auto 0 auto;
+  border-radius: 0.5em;
+  transition: 0.25s;
+}
+.buttons-section .btn-main {
+  background-color: #6168F3;
+}
+.buttons-section .btn-main:hover {
+  background-color: #2d328f;
+  transition: 0.25s;
+}
+.buttons-section .btn-secondary {
+  background-color: #ECF0FB;
+  color: #333334;
+}
+.buttons-section .btn-secondary:hover {
+  background-color: #828ba5;
+  transition: 0.25s;
+}
+
+#bg {
+  clip-path: circle(54.4% at 50% 0);
+  margin-top: -6em;
+  background-color: #6168F3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.Intro {
+  margin: auto;
+  padding: 6em 3em 6em 3em;
+  max-width: 30em;
+  text-align: center;
+  color: white;
+  background: url("/static/images/dotsbg.svg") no-repeat 90% 33%;
+}
+.Intro h1 {
+  font-size: 2em;
+}
+.Intro p {
+  font-size: 1em;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+#loginform {
+  margin: auto;
+  max-width: 40em;
+  display: grid;
+  padding: 0em 1em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+#loginform fieldset:first-of-type {
+  display: grid;
+  border: none;
+  margin: auto;
+  width: 100%;
+  max-width: 28em;
+}
+#loginform fieldset:first-of-type label {
+  font-size: 1.5em;
+  color: #333334;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+#loginform fieldset:first-of-type label a {
+  text-decoration: none;
+  color: #B8C0D7;
+  text-align: right;
+}
+#loginform fieldset:first-of-type input {
+  background-color: #F4F6FC;
+  border-radius: 0.5em;
+  padding: 1.5em 2em;
+  margin: 1em 0em 1em 0em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  max-width: 28em;
+  width: 100%;
+  font-size: 1em;
+  color: #B8C0D7;
+}
+#loginform fieldset:first-of-type input::placeholder {
+  color: #B8C0D7;
+  opacity: 1;
+  font-weight: 500;
+}
+#loginform fieldset:last-of-type {
+  display: grid;
+  border: none;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  max-width: 28em;
+}
+#loginform fieldset:last-of-type button {
+  background-color: #6168F3;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  margin: 1em 0em 1em 0em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  max-width: 19em;
+  width: 100%;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  margin-top: 2em;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+#loginform fieldset:last-of-type button:hover {
+  background-color: #2d328f;
+  transition: 0.25s ease;
+}
+#loginform fieldset:last-of-type label {
+  color: #333334;
+}
+#loginform fieldset:last-of-type label a {
+  color: #6168F3;
+}
+
+/*# sourceMappingURL=app.css.map */

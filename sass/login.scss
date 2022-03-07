@@ -9,7 +9,8 @@
     // clip-path: circle(85.4% at 50% 0):
     // clip-path: circle(44.4% at 50% 0);
     // clip-path: circle(49.4% at 50% 0);
-    clip-path: circle(41.4% at 50% 0);
+    clip-path: circle(54.4% at 50% 0);
+    margin-top: -6em;
 
     background-color: $main-color;
     width: 100%;
@@ -31,7 +32,7 @@
     // background-position: right 2em;
 
     // background: url("../images/dotsbg.svg") no-repeat 95% 50%;
-    background: url("../images/dotsbg.svg") no-repeat 90% 33% ;
+    background: url("/static/images/dotsbg.svg") no-repeat 90% 33% ;
     // background-size: cover;
 
     h1 {
@@ -70,13 +71,26 @@ a:active{
     fieldset:first-of-type{
         display: grid;
         border: none;
+        margin: auto;
+        // min-width: 28em;
+        width: 100%;
+        max-width: 28em;
 
         label{
             font-size: 1.5em;
             color: $font-color;
             font-weight: 600;
             margin-top: .5em;
+
+            a{
+                text-decoration: none;
+                color: #B8C0D7;
+                text-align: right;
+
+            }
+            
         }
+        
 
         input {
             background-color: #F4F6FC;
@@ -102,6 +116,9 @@ a:active{
         display: grid;
         border: none;
         text-align: center;
+        margin: auto;
+        width: 100%;
+        max-width: 28em;
 
         button {
             background-color: $main-color;
@@ -110,7 +127,7 @@ a:active{
             margin: 1em 0em 1em 0em;
             border: none;
             font-family: $main-font;
-            max-width: 28em;
+            max-width: 19em;
             width: 100%;
             font-size: 1.5em;
             color: $white;

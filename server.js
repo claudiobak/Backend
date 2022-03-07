@@ -47,6 +47,7 @@ app.set('views', 'view');
 
 
 
+
 // app.get('/', (req, res) => {
 //   res.send('login.hbs')
 // })
@@ -59,7 +60,7 @@ app.get('/about', (req, res) => {
   res.render('about.hbs')
 })
 
-app.get('/about', (req, res) => {
+app.get('/login', (req, res) => {
   res.render('login.hbs')
 })
 

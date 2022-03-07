@@ -1,16 +1,20 @@
 {
   "dependencies": {
     "express": "^4.17.2",
-    "hbs": "^4.2.0",
-    "node-sass": "^7.0.1"
+    "hbs": "^4.2.0"
   },
   "scripts": {
     "start": "nodemon server.js",
     "lint": "eslint .",
-    "scss": "node-sass --watch ./sass/app.scss -o ./static/css --style=compressed"
+    "dev": "nodemon server.js && npm run sass",
+    "sass": "sass ./sass/app.scss static/css/app.css --watch"
   },
   "devDependencies": {
     "eslint": "^8.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.9"
+  },
+  "engines": {
+    "node": "v17.5.0"
   }
 }
