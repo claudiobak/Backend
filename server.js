@@ -41,6 +41,11 @@ const app =  express()
 const PORT = process.env.PORT || 1337
 const bodyParser = require('bodyParser')
 
+require('dotenv').config()
+const connectDB = require('./config/db')
+
+connectDB();
+
 const { engine } = require ('express-handlebars');
 app.engine('hbs', engine({
   extname: 'hbs',
