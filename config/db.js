@@ -13,4 +13,4 @@ const connectDB = () => {
     }
 };
 
-modules.exports = connectDB;
+module.exports = connectDB;

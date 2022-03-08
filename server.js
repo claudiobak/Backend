@@ -35,16 +35,26 @@
 //   res.send('<h1>Login page</h1>')
 // }
 
+require('dotenv').config()
+console.log(process.env) // remove this after you've confirmed it working
+
 const express = require('express')
 const res = require('express/lib/response')
 const app =  express()
 const PORT = process.env.PORT || 1337
-const bodyParser = require('bodyParser')
+const bodyParser = require('body-parser')
+
+const Tweet = require('./modals/Tweet')
 
 require('dotenv').config()
 const connectDB = require('./config/db')
 
 connectDB();
+
+app.post('/createTweet', async (req, res) => {
+  const tweet = new Tweet (req.body)
+  await tweet.save()
+})
 
 const { engine } = require ('express-handlebars');
 app.engine('hbs', engine({
