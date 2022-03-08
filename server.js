@@ -39,13 +39,14 @@ const express = require('express')
 const res = require('express/lib/response')
 const app =  express()
 const PORT = process.env.PORT || 1337
-
+const bodyParser = require('bodyParser')
 
 app.use('/static',express.static('static'))
 app.set('view engine', 'hbs');
 app.set('views', 'view');
 
-
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 
 // app.get('/', (req, res) => {
