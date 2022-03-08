@@ -41,6 +41,14 @@ const app =  express()
 const PORT = process.env.PORT || 1337
 const bodyParser = require('bodyParser')
 
+const { engine } = require ('express-handlebars');
+app.engine('hbs', engine({
+  extname: 'hbs',
+  defaultLayout: 'main',
+  layoutsDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials'
+}));
+
 app.use('/static',express.static('static'))
 app.set('view engine', 'hbs');
 app.set('views', 'view');
