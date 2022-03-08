@@ -51,12 +51,14 @@
 //     max-width: 40em;
 
 
-a:link,
-a:visited,
-a:hover,
-a:active{
-    text-decoration: none;
-}
+// a:link,
+// a:visited,
+// a:hover,
+// a:active{
+//     text-decoration: none;
+// }
+
+
 
 #loginform {
     margin: auto;
@@ -86,6 +88,14 @@ a:active{
                 text-decoration: none;
                 color: #B8C0D7;
                 text-align: right;
+                font-size: 1em;
+                display: block;
+                margin-top: -0.5em;
+                font-weight: 500;
+
+                &:hover {
+                    color: $main-color;
+                }
 
             }
             
@@ -97,7 +107,7 @@ a:active{
             border-radius: .5em;
             padding: 1.5em 2em;
             margin: 1em 0em 1em 0em;
-            border: none;
+            // border: none;
             font-family: $main-font;
             max-width: 28em;
             width: 100%;
@@ -109,8 +119,38 @@ a:active{
                 opacity: 1; 
                 font-weight: 500;
             }
+
+            // &:focus {
+            // border-color: red;
+            // transition: .2s ease;
+            // }
+        
+            // &:active {
+            //     border-color: red;
+            // }
+
+            // &:focus {
+            //     border-color: red;
+            // }
+
+            // &:focus {
+            //     border-color: red;
+            // }
         }
     }
+
+input:not(:placeholder-shown) {
+    // border-color: .2em solid lightgreen;
+    // border: .12em solid lightgreen;
+    border: .2em solid $main-color;
+
+}
+
+input:placeholder-shown {
+    // border-color: solid red;
+    // border: .12em solid red;
+    border: .2em solid #B8C0D7;
+}
 
     fieldset:last-of-type{
         display: grid;
@@ -155,6 +195,14 @@ a:active{
 
         }
 }
+
+// body {
+//     max-width: 30em;
+//     max-height: 40em;
+//     border-radius: 2em;
+//     box-shadow: 1px 5px 16px -1px rgba(63,90,204,0.46);
+//     margin: auto;
+// }
 
 // ////////////////////
 // Login (end)

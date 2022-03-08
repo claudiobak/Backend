@@ -115,13 +115,6 @@ body h1 {
   font-size: 1em;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-}
-
 #loginform {
   margin: auto;
   max-width: 40em;
@@ -147,13 +140,19 @@ a:active {
   text-decoration: none;
   color: #B8C0D7;
   text-align: right;
+  font-size: 1em;
+  display: block;
+  margin-top: -0.5em;
+  font-weight: 500;
+}
+#loginform fieldset:first-of-type label a:hover {
+  color: #6168F3;
 }
 #loginform fieldset:first-of-type input {
   background-color: #F4F6FC;
   border-radius: 0.5em;
   padding: 1.5em 2em;
   margin: 1em 0em 1em 0em;
-  border: none;
   font-family: "Poppins", sans-serif;
   max-width: 28em;
   width: 100%;
@@ -164,6 +163,12 @@ a:active {
   color: #B8C0D7;
   opacity: 1;
   font-weight: 500;
+}
+#loginform input:not(:placeholder-shown) {
+  border: 0.2em solid #6168F3;
+}
+#loginform input:placeholder-shown {
+  border: 0.2em solid #B8C0D7;
 }
 #loginform fieldset:last-of-type {
   display: grid;
