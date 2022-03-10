@@ -59,9 +59,9 @@ app.post('/createTweet', async (req, res) => {
 const { engine } = require ('express-handlebars');
 app.engine('hbs', engine({
   extname: 'hbs',
-  defaultLayout: 'main',
-  layoutsDir: __dirname + '/views/layouts/',
-  partialsDir: __dirname + '/views/partials'
+  defaultLayout: 'main.hbs',
+  layoutsDir: __dirname + '/view/layouts/',
+  partialsDir: __dirname + '/view/partials'
 }));
 
 app.use('/static',express.static('static'))
