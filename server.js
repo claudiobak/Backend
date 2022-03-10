@@ -80,8 +80,8 @@ app.get('/', (req, res) => {
   res.render('startscreen.hbs')
 })
 
-app.get('/about', (req, res) => {
-  res.render('about.hbs')
+app.get('/profile', (req, res) => {
+  res.render('profile.hbs')
 })
 
 app.get('/login', (req, res) => {
