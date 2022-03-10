@@ -59,7 +59,7 @@ app.post('/createTweet', async (req, res) => {
 const { engine } = require ('express-handlebars');
 app.engine('hbs', engine({
   extname: 'hbs',
-  defaultLayout: 'main.hbs',
+  defaultLayout: 'main',
   layoutsDir: __dirname + '/view/layouts/',
   partialsDir: __dirname + '/view/partials'
 }));
@@ -85,6 +85,7 @@ app.get('/profile', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
+  console.log("test");
   res.render('login.hbs')
 })
 
