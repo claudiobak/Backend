@@ -1,28 +1,31 @@
 
-// ////////////////////
-// Login (start)
-// ////////////////////
+.arrow {
+    padding: 1.5em;
+    width: 15em;
+    // padding-top: 1em;
+    // margin-top: 2em;
+    // font-size: 1em;
+    // font-family: $main-font;
+    // color: $white;
+    // z-index: -1;
+    // display: inline;
 
+    a {
+        text-decoration: none;
+        color: $white;
+        font-family: $main-font;
+        font-size: 1.5em;
 
-
-#bg {
-    // clip-path: circle(85.4% at 50% 0):
-    // clip-path: circle(44.4% at 50% 0);
-    // clip-path: circle(49.4% at 50% 0);
-    clip-path: circle(54.4% at 50% 0);
-    margin-top: -6em;
-
-    background-color: $main-color;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-
+        img {
+            padding-right: .5em;
+        }
+    }
 }
 
-.Intro {
+
+.Intro-signup {
     margin: auto;
-    padding: 6em 3em 6em 3em;
+    padding: 2em 3em 6em 3em;
     max-width: 30em;
     // white-space: nowrap;
     text-align: center;
@@ -32,7 +35,7 @@
     // background-position: right 2em;
 
     // background: url("../images/dotsbg.svg") no-repeat 95% 50%;
-    background: url("/static/images/dotsbg.svg") no-repeat 90% 33% ;
+    background: url("/static/images/dotsbg.svg") no-repeat 82% 11% ;
     // background-size: cover;
 
     h1 {
@@ -48,22 +51,12 @@
 
 }
 
-// .form-section{
-
-//     margin: auto;
-//     max-width: 40em;
-
-
-// a:link,
-// a:visited,
-// a:hover,
-// a:active{
-//     text-decoration: none;
+// #signupform button:last-of-type{
+//     margin-bottom: 5em;
 // }
 
 
-
-#loginform {
+#signupform {
     margin: auto;
     max-width: 40em;
     display: grid;
@@ -167,7 +160,7 @@ input:placeholder-shown {
             background-color: $main-color;
             border-radius: .5em;
             padding: 1em 2em;
-            margin: 2em 0em 1em 0em;
+            margin: 2em 0em 2em 0em;
             border: none;
             font-family: $main-font;
             max-width: 19em;
@@ -188,6 +181,9 @@ input:placeholder-shown {
 
         label {
             color: $font-color;
+            // padding-top: -3em;
+            // display: inline;
+            padding-left: 1em;
 
             a{
                 color: $main-color;
@@ -195,17 +191,16 @@ input:placeholder-shown {
             }
         }
 
-        }
+    }
+        
 }
 
-// body {
-//     max-width: 30em;
-//     max-height: 40em;
-//     border-radius: 2em;
-//     box-shadow: 1px 5px 16px -1px rgba(63,90,204,0.46);
-//     margin: auto;
-// }
-
-// ////////////////////
-// Login (end)
-// ////////////////////
+#terms {
+    padding-top: 2em;
+    padding-right: 1em;
+    width: 2em;
+    height: 2em;
+    // display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}

@@ -110,9 +110,11 @@ section {
 }
 .Intro h1 {
   font-size: 2em;
+  font-family: "Poppins", sans-serif;
 }
 .Intro p {
   font-size: 1em;
+  font-family: "Poppins", sans-serif;
 }
 
 #loginform {
@@ -182,7 +184,7 @@ section {
   background-color: #6168F3;
   border-radius: 0.5em;
   padding: 1em 2em;
-  margin: 1em 0em 1em 0em;
+  margin: 2em 0em 1em 0em;
   border: none;
   font-family: "Poppins", sans-serif;
   max-width: 19em;
@@ -190,7 +192,6 @@ section {
   font-size: 1.5em;
   color: white;
   font-weight: 600;
-  margin-top: 2em;
   transition: 0.25s ease;
   cursor: pointer;
 }
@@ -251,6 +252,136 @@ section {
 }
 .main-navbar .active img {
   filter: brightness(0) saturate(100%) invert(88%) sepia(92%) saturate(32%) hue-rotate(124deg) brightness(112%) contrast(107%);
+}
+
+.arrow {
+  padding: 1.5em;
+  width: 15em;
+}
+.arrow a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+}
+.arrow a img {
+  padding-right: 0.5em;
+}
+
+.Intro-signup {
+  margin: auto;
+  padding: 2em 3em 6em 3em;
+  max-width: 30em;
+  text-align: center;
+  color: white;
+  background: url("/static/images/dotsbg.svg") no-repeat 82% 11%;
+}
+.Intro-signup h1 {
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+}
+.Intro-signup p {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+#signupform {
+  margin: auto;
+  max-width: 40em;
+  display: grid;
+  padding: 0em 1em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+#signupform fieldset:first-of-type {
+  display: grid;
+  border: none;
+  margin: auto;
+  width: 100%;
+  max-width: 28em;
+}
+#signupform fieldset:first-of-type label {
+  font-size: 1.5em;
+  color: #333334;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+#signupform fieldset:first-of-type label a {
+  text-decoration: none;
+  color: #B8C0D7;
+  text-align: right;
+  font-size: 1em;
+  display: block;
+  margin-top: -0.5em;
+  font-weight: 500;
+}
+#signupform fieldset:first-of-type label a:hover {
+  color: #6168F3;
+}
+#signupform fieldset:first-of-type input {
+  background-color: #F4F6FC;
+  border-radius: 0.5em;
+  padding: 1.5em 2em;
+  margin: 1em 0em 1em 0em;
+  font-family: "Poppins", sans-serif;
+  max-width: 28em;
+  width: 100%;
+  font-size: 1em;
+  color: #B8C0D7;
+}
+#signupform fieldset:first-of-type input::placeholder {
+  color: #B8C0D7;
+  opacity: 1;
+  font-weight: 500;
+}
+#signupform input:not(:placeholder-shown) {
+  border: 0.2em solid #6168F3;
+}
+#signupform input:placeholder-shown {
+  border: 0.2em solid #B8C0D7;
+}
+#signupform fieldset:last-of-type {
+  display: grid;
+  border: none;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  max-width: 28em;
+}
+#signupform fieldset:last-of-type button {
+  background-color: #6168F3;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  margin: 2em 0em 2em 0em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  max-width: 19em;
+  width: 100%;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+#signupform fieldset:last-of-type button:hover {
+  background-color: #2d328f;
+  transition: 0.25s ease;
+}
+#signupform fieldset:last-of-type label {
+  color: #333334;
+  padding-left: 1em;
+}
+#signupform fieldset:last-of-type label a {
+  color: #6168F3;
+}
+
+#terms {
+  padding-top: 2em;
+  padding-right: 1em;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  position: relative;
 }
 
 /*# sourceMappingURL=app.css.map */
