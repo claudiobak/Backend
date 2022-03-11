@@ -68,8 +68,7 @@ app.use('/static',express.static('static'))
 app.set('view engine', 'hbs');
 app.set('views', 'view');
 
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json())
+app.use(express.urlencoded({extended:false}))
 
 
 // app.get('/', (req, res) => {
@@ -99,6 +98,10 @@ app.get('/contact', (req, res) => {
 
 app.get('*', (req, res) => {
   res.send('<h1>Not found..</h1>')
+})
+
+app.post('/signup', (req, res) => {
+  console.log(req.body);
 })
 
 app.listen(PORT, () => {
