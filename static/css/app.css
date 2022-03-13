@@ -352,7 +352,7 @@ section {
   background-color: #6168F3;
   border-radius: 0.5em;
   padding: 1em 2em;
-  margin: 2em 0em 2em 0em;
+  margin: 2em 0em 4em 0em;
   border: none;
   font-family: "Poppins", sans-serif;
   max-width: 19em;
@@ -382,6 +382,76 @@ section {
   height: 2em;
   vertical-align: middle;
   position: relative;
+}
+
+.error {
+  background-color: #2C3338;
+}
+.error main {
+  padding: 1em;
+  margin-top: 7vh;
+  text-align: center;
+  width: 100%;
+}
+.error main section {
+  background: url(/static/images/ghostbg.svg) no-repeat 50% 14%;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  padding-top: 8em;
+}
+.error main section img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 2em;
+  animation: floating 2s linear infinite;
+}
+.error main section h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+.error main section p {
+  font-family: "Poppins", sans-serif;
+  opacity: 0.5;
+  color: white;
+  font-size: 1.5em;
+  max-width: 13em;
+  padding-bottom: 2em;
+}
+.error button {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em 2em;
+  background-color: #6168F3;
+  border-radius: 0.5em;
+  max-width: 19em;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.error button:hover {
+  background-color: #2d328f;
+  transition: 0.25s ease;
+}
+
+@keyframes floating {
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  0% {
+    transform: translateY(-10px);
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
