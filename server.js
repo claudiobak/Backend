@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 1337
 const bodyParser = require('body-parser')
 
 // const Tweet = require('./modals/Tweet')
+const UserSchema = require('./modals/userschema')
+
 
 require('dotenv').config()
 const connectDB = require('./config/db')
@@ -77,43 +79,43 @@ app.listen(PORT, () => {
 
 
 
-app.post("/test-post", async (req, res) => {
-  await database
-    .collection("test_collection")
-    .insertOne({ name: req.body.name, age: req.body.age });
+// app.post("/test-post", async (req, res) => {
+//   await database
+//     .collection("test_collection")
+//     .insertOne({ name: req.body.name, age: req.body.age });
 
-  let newUser = await database
-    .collection("test_collection")
-    .findOne({ name: req.body.name });
+//   let newUser = await database
+//     .collection("test_collection")
+//     .findOne({ name: req.body.name });
 
-  console.log(newUser); // Log the new user to the database
+//   console.log(newUser); // Log the new user to the database
 
-  res.redirect("/");
-});
+//   res.redirect("/");
+// });
 
-const username = "Stein";
-const password = "SuperCoolWachtwoord";
+// const username = "Stein";
+// const password = "SuperCoolWachtwoord";
 
-let session;
+// let session;
 
-app.post("/login-test", async (req, res) => {
-  console.log(req.body);
-  if (req.body.username == username && req.body.password == password) {
-    // Check if the username and password are correct
-    console.log("Valid username and password");
-    session = req.session;
-    session.username = req.body.username;
-    console.log(req.session);
-    res.redirect("/login");
-  } else {
-    console.log("Invalid username or password");
-    res.redirect("/");
-  }
-});
+// app.post("/login-test", async (req, res) => {
+//   console.log(req.body);
+//   if (req.body.username == username && req.body.password == password) {
+//     // Check if the username and password are correct
+//     console.log("Valid username and password");
+//     session = req.session;
+//     session.username = req.body.username;
+//     console.log(req.session);
+//     res.redirect("/login");
+//   } else {
+//     console.log("Invalid username or password");
+//     res.redirect("/");
+//   }
+// });
 
-app.get("/login", (req, res) => {
-  console.log(req.session.username); // Get the username from the session
+// app.get("/login", (req, res) => {
+//   console.log(req.session.username); // Get the username from the session
 
-  res.render("login", { username: req.session.username }); // Render the login page
-});
+//   res.render("login", { username: req.session.username }); // Render the login page
+// });
 
