@@ -1,3 +1,4 @@
+// Preventing user from submitting form when not agreed to terms & conditons
 const btn = document.querySelector('#btn');
 let form = document.querySelector('#signupform');
 
@@ -17,7 +18,7 @@ function check (event) {
 	
 }
 
-
+// Opening and closing edit form on profilepage
 let editOpenButton = document.querySelector(".profile-body main button");
 let editSluitenButton = document.querySelector(".profile-body form button:last-of-type");
 let editform = document.querySelector(".profile-body form");
