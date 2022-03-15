@@ -3,14 +3,18 @@ $main-color: #6168F3;
 $main-color-dark: darken(#6168F3, 20%);
 $btn-primary-hover: #2d328f;
 $btn-secondary-hover: #828ba5;
-
-
+$validate-color: #63d64c;
+$warning-color: #8b0000;
+$input-border-color: #B8C0D7;
+$input-bg-color: #F4F6FC;
+$black-color: black;
 $white: white;
 $light-color: #ECF0FB;
 $light-color-dark: darken(#ECF0FB, 20%);
+$errorpage-bg: #2C3338;
+$bg-icons: #D5DCF0;
 
 $font-color: #333334;
-
 
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');

@@ -1,10 +1,9 @@
 .main-navbar {
-    background: #D5DCF0;  
+    background: $bg-icons;  
     padding: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    // position: relative;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -12,7 +11,7 @@
     
     a {
       .bg-icons {
-        background-color: #D5DCF0;
+        background-color: $bg-icons;
         display: inline-block;
         justify-content: center;
         align-content: center;
@@ -23,25 +22,24 @@
         height: 3.5em;
       
         &:hover{
-          background-color: #6168F3;
+          background-color: $main-color;
         }
       }
     
       img{
         font-size: 2em;
-        // color: #333334;
-        // padding: .2em .2em;
         padding: 0.4em 0.3em 0.3em 0.3em;
         max-width: 1.5em;
       
         &:hover{
-            filter: brightness(0) saturate(100%) invert(88%) sepia(92%) saturate(32%) hue-rotate(124deg) brightness(112%) contrast(107%);        }
+            filter: brightness(0) saturate(100%) invert(88%) sepia(92%) saturate(32%) hue-rotate(124deg) brightness(112%) contrast(107%);        
+        }
       }
     }
     
     .active {
         display: inline-block;
-        background-color: #6168F3;
+        background-color: $main-color;
         justify-content: center;
         align-content: center;
         text-align: center;
@@ -51,6 +49,7 @@
         height: 3.5em;
       
         img {
-            filter: brightness(0) saturate(100%) invert(88%) sepia(92%) saturate(32%) hue-rotate(124deg) brightness(112%) contrast(107%);        }
+            filter: brightness(0) saturate(100%) invert(88%) sepia(92%) saturate(32%) hue-rotate(124deg) brightness(112%) contrast(107%);        
+        }
     }
   } 

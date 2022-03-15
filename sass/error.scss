@@ -1,5 +1,5 @@
 .error {
-    background-color: #2C3338;
+    background-color: $errorpage-bg;
 
     main {
         padding: 1em;
@@ -43,55 +43,10 @@
                 font-size: 1.5em;
                 max-width: 13em;
                 padding-bottom: 2em;
-                // padding-left: 1.5em;
-                // padding-right: 1.5em;
             }
 
         }
     }
-
-    // a {
-    //     background-color: $main-color;
-    //     border-radius: .5em;
-    //     padding: 1em 2em;
-    //     // margin: 2em 0em 1em 0em;
-    //     border: none;
-    //     font-family: $main-font;
-    //     max-width: 19em;
-    //     width: 100%;
-    //     font-size: 1.5em;
-    //     color: $white;
-    //     font-weight: 600;
-    //     transition: .25s ease;
-    //     cursor: pointer;
-    //     text-decoration: none;
-    //     // margin: auto;
-    //     text-align: center;
-    //     // position: relative;
-    //     // margin: 0 calc((100% - 48em)/2);
-
-
-    //     &:hover{
-    //         background-color: $btn-primary-hover;
-    //         transition: .25s ease;
-    //     }
-
-    // }
-
-    // a {
-    //     text-decoration: none;
-    //     color: $white;
-    //     font-family: $main-font;
-    //     font-size: 2em;
-    //     text-align: center;
-    //     // display: inline;
-    //     // padding: 1em 2em;
-    //     background-color: $main-color;
-    //     border-radius: .5em;
-    //     max-width: 19em;
-    //     width: 100%;
-
-    // }
 
         button {
         text-decoration: none;
@@ -99,7 +54,6 @@
         font-family: $main-font;
         font-size: 1.5em;
         text-align: center;
-        // display: inline;
         padding: 1em 2em;
         background-color: $main-color;
         border-radius: .5em;
@@ -108,18 +62,6 @@
         border: none;
         cursor: pointer;
         transition: .25s ease;
-        // display: inline;
-
-
-
-        
-
-        // a {
-        //     text-decoration: none;
-        //     text-decoration: none;
-        //     color: $white;
-        //     font-family: $main-font;
-        // }
 
         &:hover{
             background-color: $btn-primary-hover;

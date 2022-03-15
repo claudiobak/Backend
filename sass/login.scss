@@ -3,15 +3,13 @@
 // Login (start)
 // ////////////////////
 
-
+main {
+    background-color: $white;
+}
 
 #bg {
-    // clip-path: circle(85.4% at 50% 0):
-    // clip-path: circle(44.4% at 50% 0);
-    // clip-path: circle(49.4% at 50% 0);
     clip-path: circle(54.4% at 50% 0);
     margin-top: -6em;
-
     background-color: $main-color;
     width: 100%;
     height: 100%;
@@ -25,16 +23,9 @@
     margin: auto;
     padding: 6em 3em 6em 3em;
     max-width: 30em;
-    // white-space: nowrap;
     text-align: center;
     color: $white;
-    // background-image: url(../images/dotsbg.svg);
-    // background-repeat: no-repeat;
-    // background-position: right 2em;
-
-    // background: url("../images/dotsbg.svg") no-repeat 95% 50%;
     background: url("/static/images/dotsbg.svg") no-repeat 90% 33% ;
-    // background-size: cover;
 
     h1 {
         font-size: 2em;
@@ -49,28 +40,12 @@
 
 }
 
-// .form-section{
-
-//     margin: auto;
-//     max-width: 40em;
-
-
-// a:link,
-// a:visited,
-// a:hover,
-// a:active{
-//     text-decoration: none;
-// }
-
-
 
 #loginform {
     margin: auto;
     max-width: 40em;
     display: grid;
-    // font-size: 4em;
     padding: 0em 1em;
-    // padding: 8em 1em 0em;
     border: none;
     font-family: $main-font;
 
@@ -78,7 +53,6 @@
         display: grid;
         border: none;
         margin: auto;
-        // min-width: 28em;
         width: 100%;
         max-width: 28em;
 
@@ -90,7 +64,7 @@
 
             a{
                 text-decoration: none;
-                color: #B8C0D7;
+                color: $input-border-color;
                 text-align: right;
                 font-size: 1em;
                 display: block;
@@ -107,11 +81,10 @@
         
 
         input {
-            background-color: #F4F6FC;
+            background-color: $input-bg-color;
             border-radius: .5em;
             padding: 1.5em 2em;
             margin: 1em 0em 1em 0em;
-            // border: none;
             font-family: $main-font;
             max-width: 28em;
             width: 100%;
@@ -119,41 +92,20 @@
             color: black;
 
             &::placeholder{
-                color: #B8C0D7;
+                color: $input-border-color;
                 opacity: 1; 
                 font-weight: 500;
             }
-
-            // &:focus {
-            // border-color: red;
-            // transition: .2s ease;
-            // }
-        
-            // &:active {
-            //     border-color: red;
-            // }
-
-            // &:focus {
-            //     border-color: red;
-            // }
-
-            // &:focus {
-            //     border-color: red;
-            // }
         }
     }
 
 input:not(:placeholder-shown) {
-    // border-color: .2em solid lightgreen;
-    // border: .12em solid lightgreen;
-    border: .2em solid #63d64c;
+    border: .2em solid $validate-color;
 
 }
 
 input:placeholder-shown {
-    // border-color: solid red;
-    // border: .12em solid red;
-    border: .2em solid #B8C0D7;
+    border: .2em solid $input-border-color;
 }
 
     fieldset:last-of-type{
@@ -198,14 +150,6 @@ input:placeholder-shown {
 
         }
 }
-
-// body {
-//     max-width: 30em;
-//     max-height: 40em;
-//     border-radius: 2em;
-//     box-shadow: 1px 5px 16px -1px rgba(63,90,204,0.46);
-//     margin: auto;
-// }
 
 // ////////////////////
 // Login (end)
