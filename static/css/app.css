@@ -168,7 +168,7 @@ section {
   font-weight: 500;
 }
 #loginform input:not(:placeholder-shown) {
-  border: 0.2em solid #6168F3;
+  border: 0.2em solid #63d64c;
 }
 #loginform input:placeholder-shown {
   border: 0.2em solid #B8C0D7;
