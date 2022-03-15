@@ -1,3 +1,5 @@
+![Internow matching repo banner](https://github.com/claudiobak/Backend/blob/main/images/bloktechrepobanner.png)
+
 # Blok tech: Internow matching app
 
 ## About this repo
