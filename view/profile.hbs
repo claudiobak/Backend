@@ -7,9 +7,36 @@
     <link rel="stylesheet" href="../static/css/app.css">
     <title>Document</title>
 </head>
-<body>
+<body class="profile-body">
+        <div id="bg"></div>
+
+        <form action="/edited-profile" method="post" id="editform">
+
+            <fieldset>
+
+                <label for="username">Username</label>
+                <input type="text" id="name" name="username" required placeholder="John Doe">
+
+                <label for="email">Email</label>
+                <input type="email" id="mail" name="email" required placeholder="user@email.com">
+
+                <button id="btn" type="submit">Confirm edited info</button>
+                <button id="btn" type="submit">Cancel</button>
+
+            </fieldset>
+        </form>
     <main>
-        <h1>Hello there...</h1>
+        <h1>Welcome back Jane</h1>
+        <section>
+            <img src="../static/images/mountainimg.png" alt="filler image">
+        </section>
+
+        <section>
+            <div><h2>Name:</h2><p>Jane Doe</p></div>
+            <div><h3>Email:</h3><p>JaneDoe@gmail.com</p></div>
+        </section>
+
+        <button>edit info</button>
         {{> navbar}}
     </main>
 </body>

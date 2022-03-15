@@ -16,3 +16,16 @@ function check (event) {
 	}
 	
 }
+
+
+let editOpenButton = document.querySelector(".profile-body main button");
+let editSluitenButton = document.querySelector(".profile-body form button:last-of-type");
+let editform = document.querySelector(".profile-body form");
+
+editOpenButton.addEventListener("click", toggleMenu);
+editSluitenButton.addEventListener("click", toggleMenu);
+
+function toggleMenu(event) {
+  editform.addclassList.toggle("editOpen");
+  event.target.blur(); /* button verliest focus na de klik */
+}
