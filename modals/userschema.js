@@ -15,6 +15,10 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     }, 
+    schoolname: {
+        type: String,
+        required: true,
+    }, 
 });
 
 const User = mongoose.model('User', UserSchema)
