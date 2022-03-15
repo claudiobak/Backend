@@ -1,4 +1,4 @@
-![Internow matching repo banner](../Backend/images/repobanner.png)
+![Internow matching repo banner](https://github.com/claudiobak/Backend/blob/main/static/images/bloktechrepobanner.png)
 
 # Blok tech: Internow matching app
 
