@@ -53,7 +53,7 @@ npm run sass
 De volledige documentatie is terug te vinden in de [Wiki](https://github.com/claudiobak/Backend/wiki) van deze repo.
 
 ## :lock: License
-De applicatie heeft een [MIT](https://github.com/claudiobak/Backend/blob/main/License.md)
+De applicatie heeft een [MIT](https://github.com/claudiobak/Backend/blob/main/License.md) license
 
 
 
