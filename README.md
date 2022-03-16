@@ -1,7 +1,7 @@
 ![Internow matching repo banner](https://github.com/claudiobak/Backend/blob/main/static/images/bloktechrepobanner.png)
 
-<p align="center">![GitHub repo size](https://img.shields.io/github/repo-size/claudiobak/Backend?color=%236168F3&logo=Github)
-![GitHub](https://img.shields.io/github/license/claudiobak/Backend)</p>
+![GitHub repo size](https://img.shields.io/github/repo-size/claudiobak/Backend?color=%236168F3&logo=Github)
+![GitHub](https://img.shields.io/github/license/claudiobak/Backend)
 
 # Blok tech: Internow matching app
 
