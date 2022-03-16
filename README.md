@@ -2,7 +2,7 @@
 
 # Blok tech: Internow matching app
 
-## :file_folder About this repo :
+## :file_folder: About this repo
 In deze repo heb ik een app gebouwd doormiddel van:
 
 * HTML/SCSS & Javascript
