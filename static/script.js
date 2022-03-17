@@ -1,8 +1,8 @@
 // Preventing user from submitting form when not agreed to terms & conditons
 const btn = document.querySelector('#btn');
-let form = document.querySelector('#signupform');
+const form = document.querySelector('#signupform');
 
-form.addEventListener('submit', check);
+// form.addEventListener('submit', check);
 
 function check (event) {
 	event.preventDefault()
@@ -19,14 +19,16 @@ function check (event) {
 }
 
 // Opening and closing edit form on profilepage
-let editOpenButton = document.querySelector(".profile-body main button");
-let editSluitenButton = document.querySelector(".profile-body form button:last-of-type");
-let editform = document.querySelector(".profile-body form");
+const editOpenButton = document.querySelector(".profile-body main button");
+const editSluitenButton = document.querySelector(".profile-body form button:last-of-type");
+const editform = document.querySelector(".editform");
 
 editOpenButton.addEventListener("click", toggleMenu);
 editSluitenButton.addEventListener("click", toggleMenu);
 
-function toggleMenu(event) {
-  editform.addclassList.toggle("editOpen");
-  event.target.blur(); /* button verliest focus na de klik */
+function toggleMenu() {
+//   editform.classList.toggle("editOpen");
+editform.classList.toggle("editOpen");
+
+//   event.target.blur(); /* button verliest focus na de klik */
 }

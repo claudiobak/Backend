@@ -7,6 +7,7 @@
 //     background: url("/static/images/dotsbg.svg") no-repeat 90% 33% ;
 
 .profile-body {
+    // max-height: 100vh;
 
     #bg {
         clip-path: circle(54.4% at 50% 0);
@@ -20,10 +21,14 @@
     
     }
 
-    form {
+    #editform {
         background-color: $white;
-        height: 100vh;
-        width: 100vw;
+        // height: 100vh;
+        // width: 100vw;
+
+        position:absolute;
+        width:100%;
+        height:100%;
 
         margin: auto;
         max-width: 40em;
@@ -31,8 +36,12 @@
         padding: 0em 1em;
         border: none;
         font-family: $main-font;
-        // transform: translateX(100vh);
-        display: none;
+        overflow: hidden;
+        transform: translateX(-100%);
+        // transform:translatex(calc(-100% + 1.5em));
+
+        // display: none;
+        transition: .25s ease;
 
         fieldset:first-of-type{
             display: grid;
@@ -229,7 +238,9 @@
     }
 }
 
+// I've put !important here due to specificity rules where id's always win out.
+// So in order to overwrite the first declaration of the forms position with transform,
+// I had to put !important to set the priority of this declaration above the first one.
 .editOpen {
-    display: block;
-    scroll-behavior: none;
+    transform: translateX(0%) !important;
 }

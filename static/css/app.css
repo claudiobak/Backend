@@ -466,32 +466,35 @@ section {
   max-height: 56em;
   position: absolute;
 }
-.profile-body form {
+.profile-body #editform {
   background-color: white;
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   margin: auto;
   max-width: 40em;
   display: grid;
   padding: 0em 1em;
   border: none;
   font-family: "Poppins", sans-serif;
-  display: none;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: 0.25s ease;
 }
-.profile-body form fieldset:first-of-type {
+.profile-body #editform fieldset:first-of-type {
   display: grid;
   border: none;
   margin: auto;
   width: 100%;
   max-width: 28em;
 }
-.profile-body form fieldset:first-of-type label {
+.profile-body #editform fieldset:first-of-type label {
   font-size: 1.5em;
   color: #333334;
   font-weight: 600;
   margin-top: 0.5em;
 }
-.profile-body form fieldset:first-of-type label a {
+.profile-body #editform fieldset:first-of-type label a {
   text-decoration: none;
   color: #B8C0D7;
   text-align: right;
@@ -500,10 +503,10 @@ section {
   margin-top: -0.5em;
   font-weight: 500;
 }
-.profile-body form fieldset:first-of-type label a:hover {
+.profile-body #editform fieldset:first-of-type label a:hover {
   color: #6168F3;
 }
-.profile-body form fieldset:first-of-type input {
+.profile-body #editform fieldset:first-of-type input {
   background-color: #F4F6FC;
   border-radius: 0.5em;
   padding: 1.5em 2em;
@@ -514,18 +517,18 @@ section {
   font-size: 1em;
   color: black;
 }
-.profile-body form fieldset:first-of-type input::placeholder {
+.profile-body #editform fieldset:first-of-type input::placeholder {
   color: #B8C0D7;
   opacity: 1;
   font-weight: 500;
 }
-.profile-body form input:not(:placeholder-shown) {
+.profile-body #editform input:not(:placeholder-shown) {
   border: 0.2em solid #63d64c;
 }
-.profile-body form input:placeholder-shown {
+.profile-body #editform input:placeholder-shown {
   border: 0.2em solid #B8C0D7;
 }
-.profile-body form button:first-of-type {
+.profile-body #editform button:first-of-type {
   background-color: #6168F3;
   border-radius: 0.5em;
   padding: 1em 2em;
@@ -540,11 +543,11 @@ section {
   transition: 0.25s ease;
   cursor: pointer;
 }
-.profile-body form button:first-of-type:hover {
+.profile-body #editform button:first-of-type:hover {
   background-color: #2d328f;
   transition: 0.25s ease;
 }
-.profile-body form button:last-of-type {
+.profile-body #editform button:last-of-type {
   background-color: #98ade9;
   border-radius: 0.5em;
   padding: 1em 2em;
@@ -559,7 +562,7 @@ section {
   transition: 0.25s ease;
   cursor: pointer;
 }
-.profile-body form button:last-of-type:hover {
+.profile-body #editform button:last-of-type:hover {
   background-color: #2d328f;
   transition: 0.25s ease;
 }
@@ -633,8 +636,7 @@ section {
 }
 
 .editOpen {
-  display: block;
-  scroll-behavior: none;
+  transform: translateX(0%) !important;
 }
 
 /*# sourceMappingURL=app.css.map */
