@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const connectDB = () => {
+const connectDB = async () => {
     try {
-        mongoose.connect(process.env.CONNECTION_STRING, {
+        mongoose.connect('mongodb+srv://claudiobak:Y4p2032NL@cluster0.nscsc.mongodb.net/Cluster0?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });

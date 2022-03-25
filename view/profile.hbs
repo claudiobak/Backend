@@ -10,15 +10,15 @@
 <body class="profile-body">
         <div id="bg"></div>
 
-        <form class="editform" action="/edited-profile" method="post" id="editform">
+        <form class="editform" action="/update" method="post" id="editform">
 
             <fieldset>
 
                 <label for="username">Username</label>
-                <input type="text" id="name" name="username" placeholder="John Doe">
+                <input type="text" id="name" name="username" value="{{ user.username }}" placeholder="John Doe">
 
                 <label for="email">Email</label>
-                <input type="email" id="mail" name="email" placeholder="user@email.com">
+                <input type="email" id="mail" name="email" value="{{ user.email }}" placeholder="user@email.com">
 
                 <button id="btn" type="submit">Confirm edited info</button>
                 <button id="btn" type="button">Cancel</button>
@@ -26,17 +26,21 @@
             </fieldset>
         </form>
     <main>
-        <h1>Welcome back Jane</h1>
+        <h1>Welcome back {{ user.username }}</h1>
         <section>
-            <img src="../static/images/mountainimg.png" alt="filler image">
+            <img loading="lazy" src="../static/images/mountainimg.png" alt="filler image">
         </section>
 
         <section>
-            <div><h2>Name:</h2><p>Jane Doe</p></div>
-            <div><h3>Email:</h3><p>JaneDoe@gmail.com</p></div>
+            <div><h2>Name:</h2><p>{{ user.username }}</p></div>
+            <div><h3>Email:</h3><p>{{ user.email }}</p></div>
         </section>
 
         <button>edit info</button>
+
+    <form method="post" action="/signout">
+        <button type="submit">Sign out</button>
+    </form>
         {{> navbar}}
     </main>
         <script src="../static/script.js"></script>

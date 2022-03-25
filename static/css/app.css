@@ -480,6 +480,7 @@ section {
   overflow: hidden;
   transform: translateX(-100%);
   transition: 0.25s ease;
+  position: fixed;
 }
 .profile-body #editform fieldset:first-of-type {
   display: grid;
@@ -573,7 +574,7 @@ section {
 }
 .profile-body main h1 {
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   padding-bottom: 1em;
   padding-top: 1em;
@@ -583,6 +584,7 @@ section {
   justify-content: center;
   align-items: center;
   background-color: #F4F6FC;
+  width: 21em;
   max-width: 100%;
   height: 20em;
   border: 0.2em solid #B8C0D7;
@@ -615,7 +617,7 @@ section {
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
 }
-.profile-body main button {
+.profile-body main button:first-of-type {
   background-color: #6168F3;
   border-radius: 0.5em;
   padding: 1em 2em;
@@ -630,8 +632,27 @@ section {
   transition: 0.25s ease;
   cursor: pointer;
 }
-.profile-body main button:hover {
+.profile-body main button:first-of-type:hover {
   background-color: #2d328f;
+  transition: 0.25s ease;
+}
+.profile-body main form button:last-of-type {
+  background-color: #ECF0FB;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  margin: 0.5em 0em 6em 0em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  max-width: 19em;
+  width: 100%;
+  font-size: 1.5em;
+  color: #333334;
+  font-weight: 600;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+.profile-body main form button:last-of-type:hover {
+  background-color: #828ba5;
   transition: 0.25s ease;
 }
 
