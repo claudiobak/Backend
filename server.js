@@ -3,28 +3,14 @@ const res = require('express/lib/response')
 const app =  express()
 const PORT = process.env.PORT || 1337
 const bodyParser = require('body-parser')
-const bcrypt = require("bcrypt")
-const saltRounds = 10
 const UserSchema = require('./modals/userschema')
 const connectDB = require('./config/db')
 const session = require('express-session')
 let currentSession;
 var parseurl = require('parseurl')
 
-
-
 connectDB();
-
-bcrypt.genSalt(saltRounds, function(err, salt) {
-});
-
 require('dotenv').config()
-
-
-// app.post('/signup', async (req, res) => {
-//   const tweet = new Tweet (req.body)
-//   await tweet.save()
-// })
 
 const { engine } = require ('express-handlebars');
 const { redirect } = require('express/lib/response')
@@ -78,7 +64,6 @@ app.get('/profile', (req, res) => {
     username: req.session.username,
     email: req.session.email,
   }
-  // console.log(user);
   res.render('profile.hbs', {
     user: user
   })
@@ -91,14 +76,11 @@ app.post('/profile', (req, res) => {
     currentSession = req.session;
     currentSession.username = req.body.username
     currentSession.email = result[0].email
-    // console.log(currentSession);
-
   })
   .then(result => {
     res.redirect('profile')
   })
-  // const newuser = new UserSchema (req.body)
-  // await newuser.save()
+
 })
 
 
@@ -110,7 +92,6 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
   Promise.all([UserSchema.findOne({username: req.body.username, password:req.body.password})])
   .then(result => {
-    // console.log(result);
     res.redirect('/profile')
   })
 })
@@ -118,6 +99,7 @@ app.post('/login', (req, res) => {
 app.get('/signup', (req, res) => {
   res.render('signup.hbs')
 })
+
 
 app.get('/contact', (req, res) => {
   res.send('contactpagina..')
@@ -158,46 +140,5 @@ app.post('/signout', (req, res) => {
   req.session.destroy();
   res.redirect('/')
 })
-
-
-// app.post ('/login', async (req, res) => {
-//   try {
-//     const checkuser = await UserSchema.findOne({ username: req.body.username });
-//     if (checkuser) {
-//       const vergelijkwachtwoord = await bcrypt.compare(req.body.password, checkuser.password);
-//       if (vergelijkwachtwoord) {
-//         console.log("Inloggen voltooid!")
-//         res.redirect("/profile")
-//       } else {
-//         console.error("Foute gebruikersnaam of wachtwoord")
-//       }
-//     } else {
-//       console.error("Foute gebruikersnaam of wachtwoord")
-//     }
-//   } catch (error) {
-//     console.error(error);
-//   }
-// })
-
-// app.post ('/signup' , async (req, res) => {
-//   console.log('De gegevens zijn succesvol opgehaald')
-//   const wachtwoord = await bcrypt.hash(req.body.password, saltRounds)
-//   const newUser = new UserSchema ({
-//     username: req.body.username,
-//     email: req.body.email,
-//     password: wachtwoord
-//   });
-
-//   newUser.save((error) => {
-//     if (error) {
-//       console.log(error);
-//       return res.status(500).redirect('/signup');
-//     }
-//     return res.status(200).redirect('/profile');
-// });
-// });
-
-// ipv 1 na identifier req.body.username
-// if password 
 
 
