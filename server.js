@@ -14,7 +14,6 @@ require('dotenv').config()
 
 // template/hbs setup
 const { engine } = require ('express-handlebars');
-// const { redirect } = require('express/lib/response')
 app.engine('hbs', engine({
   extname: 'hbs',
   defaultLayout: 'main',
@@ -31,20 +30,6 @@ app.use(session({
   saveUninitialized: true
 }))
 
-// app.use(function (req, res, next) {
-//   if (!req.session.views) {
-//     req.session.views = {}
-//   }
-
-
-// // get the url pathname
-// var pathname = parseurl(req).pathname
-
-// count the views
-// req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
-
-// next()
-// })
 
 // zodat je public kan gebruiken voor css
 app.use('/static',express.static('static'))
@@ -75,7 +60,6 @@ app.get('/profile', (req, res) => {
 app.post('/profile', (req, res) => {
   Promise.all([UserSchema.findOne({username: req.body.username})])
   .then(result => {
-    // console.log(result[0].email);
     currentSession = req.session;
     currentSession.username = req.body.username
     currentSession.email = result[0].email
