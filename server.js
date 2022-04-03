@@ -7,49 +7,50 @@ const UserSchema = require('./modals/userschema')
 const connectDB = require('./config/db')
 const session = require('express-session')
 let currentSession;
-var parseurl = require('parseurl')
+const parseurl = require('parseurl')
 
 connectDB();
 require('dotenv').config()
 
+// template/hbs setup
 const { engine } = require ('express-handlebars');
-const { redirect } = require('express/lib/response')
+// const { redirect } = require('express/lib/response')
 app.engine('hbs', engine({
   extname: 'hbs',
   defaultLayout: 'main',
   layoutsDir: __dirname + '/view/layouts/',
   partialsDir: __dirname + '/view/partials'
 }));
-
+app.set('view engine', 'hbs');
+app.set('views', 'view');
 
 // sessions
-
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true
 }))
 
-app.use(function (req, res, next) {
-  if (!req.session.views) {
-    req.session.views = {}
-  }
+// app.use(function (req, res, next) {
+//   if (!req.session.views) {
+//     req.session.views = {}
+//   }
 
 
-// get the url pathname
-var pathname = parseurl(req).pathname
+// // get the url pathname
+// var pathname = parseurl(req).pathname
 
 // count the views
-req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
+// req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
 
-next()
-})
+// next()
+// })
 
-
+// zodat je public kan gebruiken voor css
 app.use('/static',express.static('static'))
-app.set('view engine', 'hbs');
-app.set('views', 'view');
 
+
+// waardes uit request halen
 app.use(express.urlencoded({extended:false}))
 
 
@@ -57,7 +58,7 @@ app.get('/', (req, res) => {
   res.render('startscreen.hbs')
 })
 
-
+// username en email displayen op profile page
 app.get('/profile', (req, res) => {
   console.log(req.session);
   const user = {
@@ -69,10 +70,12 @@ app.get('/profile', (req, res) => {
   })
 })
 
+
+// promise all haalt de user op maar wacht dat de user is gevonden
 app.post('/profile', (req, res) => {
   Promise.all([UserSchema.findOne({username: req.body.username})])
   .then(result => {
-    console.log(result[0].email);
+    // console.log(result[0].email);
     currentSession = req.session;
     currentSession.username = req.body.username
     currentSession.email = result[0].email
@@ -89,6 +92,7 @@ app.get('/login', (req, res) => {
   res.render('login.hbs')
 })
 
+// promise all haalt de user op maar wacht dat de user is gevonden
 app.post('/login', (req, res) => {
   Promise.all([UserSchema.findOne({username: req.body.username, password:req.body.password})])
   .then(result => {
@@ -109,6 +113,7 @@ app.get('*', (req, res) => {
   res.render('error.hbs')
 })
 
+// async await creeërt userschema en wacht dat deze is aangemaakt
 app.post('/signup', async (req, res) => {
   console.log(req.body);
   await UserSchema.create({
@@ -128,6 +133,7 @@ app.listen(PORT, () => {
   console.log(`Hello on port: ${PORT}`)
 })
 
+// Hier wordt de userschema geupdate met nieuwe info die de gebruiker zelf kan invullen tijdens de session
 app.post('/update', (req, res) => {
   currentSession = req.session;
   UserSchema.updateOne({ username: currentSession.username }, { username: req.body.username, email: req.body.email }).exec();
@@ -136,6 +142,7 @@ app.post('/update', (req, res) => {
   res.redirect('/profile');
 })
 
+// Hier wordt de session gedestroyed en daarmee logt de gebruiker uit
 app.post('/signout', (req, res) => {
   req.session.destroy();
   res.redirect('/')
