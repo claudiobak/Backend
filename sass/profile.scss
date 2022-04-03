@@ -8,6 +8,12 @@
 
 .profile-body {
     // max-height: 100vh;
+    // font-family: $main-font;
+
+    // h1 { 
+    //     margin:0 
+    // }
+
 
     #bg {
         clip-path: circle(54.4% at 50% 0);
@@ -156,6 +162,7 @@
         display: grid;
         align-items: center;
         justify-content: center;
+        margin: 0 2em 0 2em;
         h1 {
             color: $white;
             font-size: 1.5em;            
@@ -169,14 +176,13 @@
             justify-content: center;
             align-items: center;
             background-color: $input-bg-color;
-            width: 21em;
             max-width: 100%;
             height: 20em;
             border: .2em solid $input-border-color;
             border-radius: 1em;
         }
 
-        section:last-of-type {
+        section:nth-of-type(2) {
             div:first-of-type{
                 display: inline;
 
@@ -246,7 +252,7 @@
                 border-radius: .5em;
                 padding: 1em 2em;
                 // margin: 2em 0em 6em 0em;
-                margin: 0.5em 0em 6em 0em;
+                margin: 0.5em 0em 2em 0em;
                 border: none;
                 font-family: $main-font;
                 max-width: 19em;
@@ -274,3 +280,83 @@
 .editOpen {
     transform: translateX(0%) !important;
 }
+
+
+// /////////////////////
+// API Tips Stijling //
+// ///////////////////
+
+h4 {
+    font-size: 1.5em;
+    font-family: $main-font;
+    color: $font-color;
+    font-weight: 700;
+
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    text-align: center;    
+}
+
+#api-Tips {
+    font-size: 1em;
+    font-family: $main-font;
+    color: $font-color;
+    max-width: 100%;
+
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    text-align: center;
+    // width: 100%;
+}
+
+article {
+    padding: 1em;
+    margin: 1em;
+    border-radius: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: $light-color;
+    max-width: 100%;
+
+    &:last-of-type {
+        margin-bottom: 7em;
+    }
+
+    p {
+        font-size: 1em;
+        font-family: $main-font;
+        color: $font-color;
+    }
+
+    h5 {
+        font-size: 1em;
+        font-family: $main-font;
+        color: $font-color;
+        font-weight: 700;;
+
+    }
+        
+}
+
+
+// main :not(.main-navbar ){
+//     padding-left: 1em;
+//     padding-right: 1em;
+
+// }
+
+// #api-Tips {
+//     display: grid;
+//     // font-size: 1em;
+//     font-family: $main-font;
+//     // color: $font-color;
+//     // max-width: 100%;
+
+//     // display: flex;
+//     // flex-direction: column;
+//     // align-items: center;
+//     // text-align: center;
+//     // width: 100%;
+// }

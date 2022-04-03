@@ -216,6 +216,7 @@ section {
   width: 100%;
   bottom: 0;
   border-radius: 1em 1em 0 0;
+  margin-left: -2em;
 }
 .main-navbar a .bg-icons {
   background-color: #D5DCF0;
@@ -571,6 +572,7 @@ section {
   display: grid;
   align-items: center;
   justify-content: center;
+  margin: 0 2em 0 2em;
 }
 .profile-body main h1 {
   color: white;
@@ -584,35 +586,34 @@ section {
   justify-content: center;
   align-items: center;
   background-color: #F4F6FC;
-  width: 21em;
   max-width: 100%;
   height: 20em;
   border: 0.2em solid #B8C0D7;
   border-radius: 1em;
 }
-.profile-body main section:last-of-type div:first-of-type {
+.profile-body main section:nth-of-type(2) div:first-of-type {
   display: inline;
 }
-.profile-body main section:last-of-type div:first-of-type h2 {
+.profile-body main section:nth-of-type(2) div:first-of-type h2 {
   color: #333334;
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   padding-bottom: 0.2em;
   padding-top: 1em;
 }
-.profile-body main section:last-of-type div:first-of-type p {
+.profile-body main section:nth-of-type(2) div:first-of-type p {
   color: #333334;
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
 }
-.profile-body main section:last-of-type div:last-of-type h3 {
+.profile-body main section:nth-of-type(2) div:last-of-type h3 {
   color: #333334;
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   padding-bottom: 0.2em;
   padding-top: 1em;
 }
-.profile-body main section:last-of-type div:last-of-type p {
+.profile-body main section:nth-of-type(2) div:last-of-type p {
   color: #333334;
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
@@ -640,7 +641,7 @@ section {
   background-color: #ECF0FB;
   border-radius: 0.5em;
   padding: 1em 2em;
-  margin: 0.5em 0em 6em 0em;
+  margin: 0.5em 0em 2em 0em;
   border: none;
   font-family: "Poppins", sans-serif;
   max-width: 19em;
@@ -658,6 +659,48 @@ section {
 
 .editOpen {
   transform: translateX(0%) !important;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  color: #333334;
+  font-weight: 700;
+  align-items: center;
+  text-align: center;
+}
+
+#api-Tips {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  color: #333334;
+  max-width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+article {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #ECF0FB;
+  max-width: 100%;
+}
+article:last-of-type {
+  margin-bottom: 7em;
+}
+article p {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  color: #333334;
+}
+article h5 {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  color: #333334;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=app.css.map */
