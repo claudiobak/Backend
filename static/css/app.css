@@ -206,6 +206,28 @@ section {
   color: #6168F3;
 }
 
+.loginpage #signupform fieldset:last-of-type div {
+  display: flex;
+  padding: 1em calc((100% - 15em) / 2);
+}
+
+.fouteInput {
+  display: block;
+  color: red;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+form label#error.errorLabel {
+  display: block;
+  color: red;
+  font-weight: 600;
+  font-size: 1.5em;
+  padding-top: 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
 .main-navbar {
   background: #D5DCF0;
   padding: 1rem;

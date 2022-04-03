@@ -23,8 +23,8 @@ const editOpenButton = document.querySelector(".profile-body main button");
 const editSluitenButton = document.querySelector(".profile-body form button:last-of-type");
 const editform = document.querySelector(".editform");
 
-editOpenButton.addEventListener("click", toggleMenu);
-editSluitenButton.addEventListener("click", toggleMenu);
+// editOpenButton.addEventListener("click", toggleMenu);
+// editSluitenButton.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
 //   editform.classList.toggle("editOpen");

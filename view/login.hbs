@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../static/css/app.css">
     <title>Document</title>
 </head>
-<body>
+<body class="loginpage">
     <div id="bg"></div>
 
     <main>
@@ -22,11 +22,13 @@
             <fieldset>
 
                 <label for="name">Username</label>
-                <input type="text" id="name" name="username" required placeholder="John Doe">
+                <input type="text" id="name" name="username" placeholder="John Doe">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required placeholder="password">
+                <input type="password" id="password" name="password" placeholder="password">
                 <label for="forgot"><a href="#">Forgot password?</a></label>
             </fieldset>
+
+            <label id="error"></label>
 
             <fieldset>
             <button id="btn" type="submit">Login</button>
@@ -36,6 +38,8 @@
 
 
     </main>
+    <script src="../static/pro.js"></script>
     <script src="../static/script.js"></script>
+
 </body>
 </html>
