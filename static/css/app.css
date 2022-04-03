@@ -397,6 +397,11 @@ form label#error.errorLabel {
 #signupform fieldset:last-of-type label a {
   color: #6168F3;
 }
+#signupform fieldset:last-of-type div {
+  padding: 2em 2em 0 2em;
+  align-items: center;
+  display: flex;
+}
 
 #terms {
   padding-top: 2em;
@@ -679,8 +684,8 @@ form label#error.errorLabel {
   transition: 0.25s ease;
 }
 
-.editOpen {
-  transform: translateX(0%) !important;
+form#editform.\.editOpen {
+  transform: translateX(0%);
 }
 
 h4 {

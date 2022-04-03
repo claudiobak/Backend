@@ -27,16 +27,11 @@ function gegevensOphalen(data) {
 		let tip = document.createElement('h5');
 		tip.textContent = item['tip'];
 		
-		// let land = document.createElement('h3');
-		// land.textContent = item['Land'];
-		
 		let uitlegTip = document.createElement('p');
 		uitlegTip.textContent = item['uitlegTip'];
 		
 		container.appendChild(tip);
-		// container.appendChild(land);
 		container.appendChild(uitlegTip);
-
 		apiTips.appendChild(container);
 	})
 

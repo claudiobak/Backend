@@ -21,7 +21,7 @@
                 <input type="email" id="mail" name="email" value="{{ user.email }}" placeholder="user@email.com">
 
                 <button id="btn" type="submit">Confirm edited info</button>
-                <button id="btn" type="button">Cancel</button>
+                <button id="close-btn" type="button">Cancel</button>
 
             </fieldset>
         </form>
@@ -36,35 +36,22 @@
             <div><h3>Email:</h3><p>{{ user.email }}</p></div>
         </section>
 
-        <button>edit info</button>
+        <button id="open-btn">edit info</button>
 
     <form method="post" action="/signout">
         <button type="submit">Sign out</button>
     </form>
 
+    {{!-- API SECTION --}}
     <h4>Tips:</h4>
 
     <section id="api-section">
-        {{!-- <article>
-            <h5>Linkedin Profile</h5>
-            <p>Make sure you regularly update your Linkedin profile.</p>
-        </article>
-
-        <article>
-            <h5>Linkedin Profile</h5>
-            <p>Make sure you regularly update your Linkedin profile.</p>
-        </article>
-
-        <article>
-            <h5>Linkedin Profile</h5>
-            <p>Make sure you regularly update your Linkedin profile.</p>
-        </article> --}}
 
     </section>
 
         {{> navbar}}
     </main>
-        <script src="../static/script.js"></script>
+        <script src="../static/editform.js"></script>
         <script src="../static/api.js"></script>
 
 </body>
